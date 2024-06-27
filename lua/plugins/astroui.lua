@@ -1,4 +1,3 @@
-
 -- AstroUI provides the basis for configuring the AstroNvim User Interface
 -- Configuration documentation can be found with `:h astroui`
 -- NOTE: We highly recommend setting up the Lua Language Server (`:LspInstall lua_ls`)
@@ -9,20 +8,21 @@ return {
   "AstroNvim/astroui",
   ---@type AstroUIOpts
   opts = {
+    TransparentEnable = true,
     -- change colorscheme
     colorscheme = "catppuccin",
     -- AstroUI allows you to easily modify highlight groups easily for any and all colorschemes
-    -- 
+    --
     highlights = {
       -- set highlights for all themes
       -- use a function override to let us use lua to retrieve
       -- colors from highlight group there is no default table
       -- so we don't need to put a parameter for this function
-      -- 
+      --
       init = function()
         local get_hlgroup = require("astroui").get_hlgroup
         -- get highlights from highlight groups
-        local normal = get_hlgroup("Normal")
+        local normal = get_hlgroup "Normal"
         local fg, bg = normal.fg, normal.bg
         local bg_alt = get_hlgroup("Visual").bg
         local green = get_hlgroup("String").fg
