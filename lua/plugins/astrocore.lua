@@ -60,6 +60,8 @@ return {
           desc = "Close buffer from tabline",
         },
 
+        -- add mapping for <Leader>bb to open Telescope buffers
+        ["<Leader>b1"] = { "<Cmd>Telescope buffers<CR>", desc = "Open list of buffers with Telescope" },
         -- tables with just a `desc` key will be registered with which-key if it's installed
         -- this is useful for naming menus
         -- ["<Leader>b"] = { desc = "Buffers" },
