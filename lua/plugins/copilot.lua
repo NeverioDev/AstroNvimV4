@@ -1,10 +1,9 @@
-
 return {
   {
     "zbirenbaum/copilot.lua",
     opts = {},
     config = function()
-      require('copilot').setup({
+      require("copilot").setup {
         suggestion = {
           enabled = true,
           auto_trigger = true,
@@ -13,7 +12,7 @@ return {
         panel = {
           enabled = true,
         },
-      })
+      }
     end,
   },
   {
@@ -66,10 +65,6 @@ return {
         if copilot.is_visible() then copilot.accept_line() end
       end)
 
-      opts.mapping["<C-j>"] = cmp.mapping(function()
-        if copilot.is_visible() then copilot.accept_line() end
-      end)
-
       opts.mapping["<C-c>"] = cmp.mapping(function()
         if copilot.is_visible() then copilot.dismiss() end
       end)
@@ -78,4 +73,3 @@ return {
     end,
   },
 }
-
