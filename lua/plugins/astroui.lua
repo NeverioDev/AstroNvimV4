@@ -10,7 +10,9 @@ return {
   opts = {
     TransparentEnable = true,
     -- change colorscheme
-    colorscheme = "catppuccin",
+    -- colorscheme = "catppuccin",
+    -- colorscheme = "everforest",
+    colorscheme = "oxocarbon",
     -- AstroUI allows you to easily modify highlight groups easily for any and all colorschemes
     --
     highlights = {
